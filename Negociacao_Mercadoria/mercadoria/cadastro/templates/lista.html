@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+{% block content %}
+<table border=2>
+        <tr>
+                <center>
+                        <th>Codigo</th>
+                        <th>Tipo</th>
+                        <th>Nome</th>
+                        <th>Quantidade</th>
+                        <th>Preço</th>
+                        <th>Tipo de Negocio</th>
+                </center>
+        </tr>
+        {% for nome in object_list %}
+                <tr>
+                        <center>
+                                <td>{{ nome.codigo_mercadoria }}</td>
+                                <td>{{ nome.tipo_mercadoria }}</td>
+                                <td>{{ nome.nome_mercadoria }}</td>
+                                <td>{{ nome.quantidade_mercadoria }}</td>
+                                <td>{{ nome.preco_mercadoria }}</td>
+                                <td>{{ nome.tipo_negocio}}</td>
+                        </center>
+                </tr>
+        {% empty %}
+                <li>Sem itens na lista.</li>
+        {% endfor %}
+</table>
+{% endblock content %}
