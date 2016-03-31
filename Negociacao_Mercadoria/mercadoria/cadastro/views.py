@@ -18,7 +18,3 @@ class ListaView(ListView):
 	model = Mercadoria
 	template_name = 'lista.html'
 	context_object = 'nome'
-
-class MercadoriaDelete(DeleteView):
-	model = Mercadoria
-	success_url = reverse_lazy('lista')
